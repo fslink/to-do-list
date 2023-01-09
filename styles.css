@@ -1,0 +1,13 @@
+.container{
+    margin-top: 2em;
+}
+
+ul{
+    margin-top: 1.3em;
+    text-align: right;
+}
+
+ul li span {
+    position: absolute;
+    left: 1%;
+}
