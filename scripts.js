@@ -10,17 +10,14 @@ form.addEventListener('submit', (e) => {
     const to_do = document.querySelector('#to_do');
     const txt = obj?.to_do;
 
-    const listHtml = `<span>${txt}</span>
-    <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>`;
+    const span = document.createElement('span');
+    const btn = document.createElement('button');
+    btn.classList.add('btn', 'btn-danger');
+    span.innerText = txt;
 
-    li.innerHTML = listHtml;
+    li.appendChild(span);
+    li.appendChild(btn);
     ul.appendChild(li);
     
     to_do.value = '';
-});
-
-const ul = document.querySelector('ul');
-console.log(ul);
-ul.addEventListener('click', (e) =>{
-    console.log(e);
 });
